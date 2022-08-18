@@ -230,10 +230,10 @@ for iterator = 1:length(times)
     xlabel('y (m)')
     ylabel('x (m)')
     view(0,0);
-    title('2D Finite Element Model of Elastic Ice Shelf Loading')
-    zlim([-50 1])
-    xlim([-60 60])
-    ylim([-60,60])
+    title('2D Finite Element Model of Ice Shelf Loading')
+    %zlim([-60.,10.])
+    %xlim([-60 60])
+    %ylim([-60,60])
     hold on;
     
     subplot(1,2,2);
@@ -252,7 +252,7 @@ for iterator = 1:length(times)
     x_width=10 ;y_width=5;
     set(gcf, 'PaperPosition', [0 0 x_width y_width]);
     snum = num2str(iterator,'%04.f');
-    filename = strcat('animation/test.', snum, '.png');
+    filename = strcat('results/ice-shelf.', snum, '.png');
     %filename = strcat('animation/test.', num2str(time,'%2.2f'), '.png');
     saveas(f, filename, 'png');
     close all;
